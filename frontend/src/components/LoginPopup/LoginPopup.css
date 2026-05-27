@@ -1,0 +1,102 @@
+/* Overlay popup */
+.login-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* increased to prevent click blocking */
+    background-color: rgba(0, 0, 0, 0.56); /* #00000090 */
+    display: grid;
+}
+
+/* Container for form */
+.login-popup-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+}
+
+/* Title section with close icon */
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+}
+
+/* Input fields */
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9; /* fixed missing space */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Submit button */
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: tomato;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-popup-container button:hover {
+    background-color: #e5533d;
+}
+
+/* Terms and conditions section */
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+}
+
+/* Bottom text links */
+.login-popup p span {
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
