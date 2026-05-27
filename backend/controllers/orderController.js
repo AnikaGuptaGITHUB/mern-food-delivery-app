@@ -15,7 +15,7 @@ const USD_TO_INR = 83;
 // 🟢 PLACE ORDER
 // ==================================
 const placeOrder = async (req, res) => {
-  const frontend_url = "http://localhost:5173";
+  const frontend_url = "https://food-del-frontend-pwuk.onrender.com";
 
   try {
     console.log("🟢 placeOrder triggered!");
